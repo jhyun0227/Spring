@@ -15,7 +15,11 @@
 	/* location.href="guguForm" */
 	/* location.href="addrForm" */
 	/* location.href="memberForm" */
-	location.href="calForm"
+	/* location.href="calForm" */
+	/* locatin.href="mem1" */
+	/* locatin.href="mem1List" */
+	/* locatin.href="mem1.json" */
+	locatin.href="mem1List.json"
 </script>
 </body>
 </html>

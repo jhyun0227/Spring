@@ -63,8 +63,9 @@ public class TestController {
 		return "cal";
 	}
 	
-	@ExceptionHandler(ArithmeticException.class)
-	public String err1() {
-		return "err1";
-	}
+//	// 현재 컨트롤러에서 발생한 에러만 처리
+//	@ExceptionHandler(ArithmeticException.class)
+//	public String err1() {
+//		return "err1";
+//	}
 }
