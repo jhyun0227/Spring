@@ -1,4 +1,5 @@
 package samp01;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 // c + s + o
@@ -6,23 +7,40 @@ import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-public class MessageBeanImpl implements MessageBean, BeanNameAware, BeanFactoryAware,
-InitializingBean, DisposableBean {	
-	private String greeting;	
-	public MessageBeanImpl() {	System.out.println("â‘  Beanì˜ ìƒì„±ì ì‹¤í–‰");	}
+
+public class MessageBeanImpl implements MessageBean, BeanNameAware, BeanFactoryAware, InitializingBean, DisposableBean {
+	private String greeting;
+
+	public MessageBeanImpl() {
+		System.out.println("¨ç BeanÀÇ »ı¼ºÀÚ ½ÇÇà");
+	}
+
 	public void setGreeting(String greeting) {
-		System.out.println("â‘¡ ì„¸í„° ë©”ì„œë“œ ì‹¤í–‰");	this.greeting = greeting;
+		System.out.println("¨è ¼¼ÅÍ ¸Ş¼­µå ½ÇÇà");
+		this.greeting = greeting;
 	}
-	public void setBeanName(String name) {	System.out.println("â‘¢ Beanëª… ì§€ì •");	}
+
+	public void setBeanName(String name) {
+		System.out.println("¨é Bean¸í ÁöÁ¤");
+	}
+
 	public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-		System.out.println("â‘£ BeanFactory ì§€ì •");
+		System.out.println("¨ê BeanFactory ÁöÁ¤");
 	}
-	public void afterPropertiesSet() throws Exception {	System.out.println("â‘¥ í”„ë¡œí¼í‹° ì§€ì • ì™„ë£Œ");	}
-	public void aa() {	System.out.println("â‘¦ ì´ˆê¸°í™” ë©”ì„œë“œ ì‹¤í–‰");	}
+
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("¨ì ÇÁ·ÎÆÛÆ¼ ÁöÁ¤ ¿Ï·á");
+	}
+
+	public void aa() {
+		System.out.println("¨í ÃÊ±âÈ­ ¸Ş¼­µå ½ÇÇà");
+	}
+
 	public void sayHello() {
 		System.out.println(greeting);
 	}
-	public void destroy() throws Exception { 
-		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
+
+	public void destroy() throws Exception {
+		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
 	}
 }

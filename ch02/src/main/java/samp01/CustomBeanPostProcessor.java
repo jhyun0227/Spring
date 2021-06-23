@@ -1,13 +1,16 @@
 package samp01;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+
 public class CustomBeanPostProcessor implements BeanPostProcessor {
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-		System.out.println("â‘¤ ì´ˆê¸°í™” ì „ Beanì— ëŒ€í•œ ì²˜ë¦¬ ì‹¤í–‰");
+		System.out.println("¨ë ÃÊ±âÈ­ Àü Bean¿¡ ´ëÇÑ Ã³¸® ½ÇÇà");
 		return bean;
 	}
+
 	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-		System.out.println("â‘§ ì´ˆê¸°í™” í›„ Beanì— ëŒ€í•œ ì²˜ë¦¬ ì‹¤í–‰");
+		System.out.println("¨î ÃÊ±âÈ­ ÈÄ Bean¿¡ ´ëÇÑ Ã³¸® ½ÇÇà");
 		return bean;
 	}
 }
