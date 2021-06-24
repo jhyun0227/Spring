@@ -6,6 +6,7 @@
 	<typeAliases>
 					<!-- 별명                                         실제 객체 -->
 		<typeAlias alias="member" type="com.ch.mybatis.model.Member"/>
+		<typeAlias alias="memberphoto" type="com.ch.mybatis.model.MemberPhoto"/>
 	</typeAliases>
 	
 	<mappers>
