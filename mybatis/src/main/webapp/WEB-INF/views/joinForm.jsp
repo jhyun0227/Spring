@@ -14,7 +14,7 @@
 			return false
 		}
 		// id를 입력했던 jquery의 ajax를 사용해 보자
-		// data는 Controller에서 보내줒 데이터(jsp에 보이는 데이터)
+		// data는 Controller에서 보내준 데이터(jsp에 보이는 데이터)
 		// data에는 컨트롤러에서 보내준 msg에 담겨있는 문자를 받아서 저장
 		$.post('idChk.do', 'id='+frm.id.value, function(data) {
 			$('#idChk').html(data);
