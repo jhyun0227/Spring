@@ -10,6 +10,15 @@
 	$(function() {
 		$('#empList').load("empList.html table", "deptno=${emp.deptno}")
 	});
+	
+	function del(empno) {
+		var cf = confirm("정말로 삭제하시겠습니까?");
+		if (cf) {
+			location.href="empDelete.html?empno=" + empno;
+		} else {
+			alert("삭제가 취소되었습니다.");
+		}
+	}
 </script>
 </head>
 <body>

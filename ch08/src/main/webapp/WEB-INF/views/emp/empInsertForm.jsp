@@ -39,7 +39,7 @@ function empNoChk() {
 			</tr>
 			<tr>
 				<td>업무</td>
-				<td><input type="text" name="ename" required="required"></td>
+				<td><input type="text" name="job" required="required"></td>
 			</tr>
 			<tr>
 				<td>관리자 사번</td>
@@ -78,7 +78,7 @@ function empNoChk() {
 					</select>
 				</td>
 			</tr>
-			<tr>
+			<tr align="center">
 				<td colspan="2"><input type="submit" value="확인" class="btn btn-danger"></td>
 			</tr>
 		</table>
