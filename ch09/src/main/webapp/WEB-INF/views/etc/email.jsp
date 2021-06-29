@@ -7,11 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<script type="text/javascript">
-//	location.href="list.do";
-//	location.href="mailForm.do";
-//	location.href="jsonBoard.do";
-	location.href="json.do";
-</script>
+${msg }
 </body>
 </html>
