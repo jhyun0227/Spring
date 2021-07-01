@@ -35,8 +35,12 @@
 			send();
 		});
 		
-		$('#message').click(function() {
-			
+		$('#message').keypress(function() {
+			//  누른 키의 assccii값이 IE면?   IE key값              IE아닌 키
+			var keycode = event.keyCode?event.keyCode:event.which;
+			if (keycode == 13) { // 13은 '아스키코드' 엔터
+				send();
+			}
 		});
 	});
 	
@@ -49,11 +53,13 @@
 	}
 	
 	function disconnect() {
-		
+		websocket.close();
 	}
 	
 	function send() {
-		
+		var msg = $('#message').val(); // 입력한 메세지를 변수에 담음
+		websocket.send(nickname+"=>"+msg); // 메세지를 별명과 함께 보내기
+		$('#message').val(""); // 메세지 창에 입력한 글을 지우기
 	}
 	
 	function Open() {
@@ -72,6 +78,9 @@
 	
 	function appendMessage(msg) {
 		$('#chatMessage').append(msg+"<br>");
+		/* 채팅창에 글이 꽉 찼을 경우에 최신 글이 하단에 보이게 한다. */
+		var objDiv = document.getElementById("chatMessage");
+		objDiv.scrollTop = objDiv.scrollHeight;
 	}
 </script>
 </head>
