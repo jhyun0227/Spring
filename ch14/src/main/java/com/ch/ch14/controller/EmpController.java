@@ -8,10 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ch.ch14.Service.DeptService;
-import com.ch.ch14.Service.EmpService;
 import com.ch.ch14.model.Dept;
 import com.ch.ch14.model.Emp;
+import com.ch.ch14.service.DeptService;
+import com.ch.ch14.service.EmpService;
 
 @Controller
 public class EmpController {

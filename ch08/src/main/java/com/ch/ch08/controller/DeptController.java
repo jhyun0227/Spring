@@ -10,8 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ch.ch08.Service.DeptService;
 import com.ch.ch08.model.Dept;
+import com.ch.ch08.service.DeptService;
 
 @Controller
 public class DeptController {
